@@ -125,7 +125,8 @@ def teleoperate(cfg: TeleoperateConfig):
     try:
         teleop_loop(teleop, robot, cfg.fps, display_data=cfg.display_data, duration=cfg.teleop_time_s)
     except KeyboardInterrupt:
-        pass
+        teleop.disconnect()
+        robot.disconnect()
     finally:
         if cfg.display_data:
             rr.rerun_shutdown()
