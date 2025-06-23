@@ -149,6 +149,12 @@ wandb login
 
 (note: you will also need to enable WandB in the configuration. See below.)
 
+If you use an Nvidia RTX50XX gpu, install the following pytorch version: 
+
+```bash
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+```
+
 ## Walkthrough
 
 ```
